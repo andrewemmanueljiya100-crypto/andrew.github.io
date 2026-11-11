@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CryptoInvest | Investment Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h2>Crypto<span>Invest</span></h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#plans">Investment Plans</a>
+            <a href="#transactions">Transactions</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to CryptoInvest</h1>
+
+            <p>
+                Explore cryptocurrency markets and manage
+                your digital asset portfolio.
+            </p>
+
+            <button onclick="showLogin()">Log In</button>
+            <button class="secondary" onclick="showRegister()">
+                Create Account
+            </button>
+        </section>
+
+        <section id="login" class="card hidden">
+            <h2>Log In</h2>
+
+            <form id="loginForm">
+                <label for="loginEmail">Email Address</label>
+                <input id="loginEmail" type="email" required>
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" required>
+
+                <button type="submit">Log In</button>
+            </form>
+
+            <p>Don't have an account?
+                <a href="#" onclick="showRegister(); return false;">
+                    Register
+                </a>
+            </p>
+        </section>
+
+        <section id="register" class="card hidden">
+            <h2>Create Account</h2>
+
+            <form id="registerForm">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" type="text" required>
+
+                <label for="registerEmail">Email Address</label>
+                <input id="registerEmail" type="email" required>
+
+                <label for="registerPassword">Password</label>
+                <input id="registerPassword" type="password"
+                       minlength="8" required>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p>Already registered?
+                <a href="#" onclick="showLogin(); return false;">
+                    Log In
+                </a>
+            </p>
+        </section>
+
+        <section id="dashboard" class="card">
+            <h2>Dashboard Preview</h2>
+            <p>Demo portfolio balance</p>
+            <h1>$0.00</h1>
+            <p>This is a sample display, not a real account balance.</p>
+        </section>
+
+        <section id="plans" class="card">
+            <h2>Explore Investment Options</h2>
+            <p>Learn about digital assets, market risks,
+               and different investment approaches.</p>
+        </section>
+
+        <section id="transactions" class="card">
+            <h2>Transactions</h2>
+            <p>No demo transactions to display.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CryptoInvest. Cryptocurrency investments involve risk.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
